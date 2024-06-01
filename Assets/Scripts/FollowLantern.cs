@@ -24,12 +24,13 @@ public class FollowLantern : MonoBehaviour
         obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
         ground = GameObject.FindGameObjectsWithTag("Ground");
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.gravityScale = 14f; //slam him into the ground because he wants to fly
+        rb2D.gravityScale = 20f; //slam him into the ground because he wants to fly
     }
 
     // Update is called once per frame
     void Update()
     {
+        // recompile por favor
         lantern = GameObject.FindGameObjectWithTag("Lantern");
         if (lantern != null) MoveCharacter();
     }
@@ -79,6 +80,6 @@ public class FollowLantern : MonoBehaviour
     }
 
     void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Ramp")) rb2D.gravityScale = 14f;
+        if (collision.gameObject.CompareTag("Ramp")) rb2D.gravityScale = 20f;
     }
 }

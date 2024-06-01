@@ -24,6 +24,5 @@ public class EnableLantern : MonoBehaviour
         lantern.SetActive(false);
         lanternActiveInt = 0;
        }
-       Debug.Log(lanternActiveInt);
     }
 }
