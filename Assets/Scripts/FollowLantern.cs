@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using GLSLVectors;
 
 public class FollowLantern : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class FollowLantern : MonoBehaviour
     float groundDistance;
     Rigidbody2D rb2D;
 
+    [SerializeField] float wobbleWalkMaxAngle = 10;
+    [SerializeField] float wobbleSpeed = 6;
+
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +41,18 @@ public class FollowLantern : MonoBehaviour
     }
 
     void MoveCharacter() {
-        Vector3 targetPosition = new Vector3(lantern.transform.position.x, lantern.transform.position.y, 0);
+        Vector3 targetPosition = F.vec3(lantern.transform.position.xy(), 0);
+        float distance = (transform.position - targetPosition).magnitude;
         Vector3 direction = (targetPosition - transform.position).normalized;
         Vector3 step = direction * speed * Time.deltaTime;
 
+        // flip
+        if (direction.x > 0)
+            spriteRenderer.flipX = true;
+        if (direction.y < 0)
+            spriteRenderer.flipX = false;
+
+        // huh?
         for (int o = 0; o < ground.Length; o++) {
             Vector3 diff = ground[o].transform.position - transform.position;
             float curDistance = diff.sqrMagnitude;
@@ -56,10 +69,12 @@ public class FollowLantern : MonoBehaviour
         RaycastHit2D hitRamp = Physics2D.Raycast(transform.position, direction, step.magnitude, rampLayer);
         Debug.DrawRay(transform.position, direction * step.magnitude, Color.blue);
 
+        transform.eulerAngles = F.vec3(0, 0, 0);
         groundDistance = transform.position.y - closetGround.transform.position.y;
-        if (hitObstacle.collider == null || hitRamp.collider != null && groundDistance < 1f)
+        if (((hitObstacle.collider == null || hitRamp.collider != null) && groundDistance < 1f) && distance > 1f)
         {
             rb2D.MovePosition(transform.position + step);
+            transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
         } else Debug.Log("Hit an obstacle, cannot move further");
     }
 

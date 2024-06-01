@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 1200f;      // Amount of force added when the player jumps.
     [SerializeField] private float jumpSlowMovement = 5f;
 
+    [SerializeField] float wobbleWalkMaxAngle = 30;
+    [SerializeField] float wobbleSpeed = 30;
+
     [SerializeField] private BoxCollider2D groundCheck;
     [SerializeField] SpriteRenderer spriteRenderer;
 
@@ -29,8 +32,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
-
         transform.Translate(horizontalMove, 0, 0);
+
+        // wobble
+        transform.eulerAngles = F.vec3(0, 0, 0);
+        if (horizontalMove != 0)
+            transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {

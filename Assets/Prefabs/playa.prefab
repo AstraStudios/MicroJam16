@@ -106,7 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 7
   jumpForce: 1200
-  jumpSlowMovement: 5
+  jumpSlowMovement: 6
+  wobbleWalkMaxAngle: 6
+  wobbleSpeed: 10
   groundCheck: {fileID: 1286050711100822844}
   spriteRenderer: {fileID: 783733209768970264}
   grounded: 0
