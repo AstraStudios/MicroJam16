@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4176001109364087244}
   - component: {fileID: 8616933799666720926}
   - component: {fileID: 1393388630819877266}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: playa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
