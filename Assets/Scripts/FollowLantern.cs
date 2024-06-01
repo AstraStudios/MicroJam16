@@ -20,7 +20,6 @@ public class FollowLantern : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lantern = GameObject.FindGameObjectWithTag("Lantern");
         ramps = GameObject.FindGameObjectsWithTag("Ramp");
         obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
         ground = GameObject.FindGameObjectsWithTag("Ground");
@@ -31,6 +30,7 @@ public class FollowLantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lantern = GameObject.FindGameObjectWithTag("Lantern");
         if (lantern != null) MoveCharacter();
     }
 
