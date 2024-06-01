@@ -47,9 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be15a729119744c42a7ccd5fa7b4b209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToBeMoved:
-  - {fileID: 0}
-  - {fileID: 0}
+  objectsToBeMoved: []
   objectsDestination: []
   movementTime: 5
 --- !u!61 &7072978783529882384
