@@ -20,21 +20,28 @@ public class ButtonMovesSomething : MonoBehaviour
             gateMoving = true;
     }
 
+    private void Awake()
+    {
+        gate.position = gateOrigionalTransfrom.position;
+        gate.rotation = gateOrigionalTransfrom.rotation;
+    }
+
     private void Update()
     {
         if (gateMoving)
         {
             gateMovementLerpTimer += Time.deltaTime / gateMovementSeconds;
+            float smoothTime = 1f - Mathf.Pow(1 - gateMovementLerpTimer, 3);
 
             // finish movement
-            if (gateMovementLerpTimer > 1)
+            if (gateMovementLerpTimer >= 1)
             {
                 gateMoving = false;
                 gateMovementLerpTimer = 1;
+                smoothTime = 1f;
             }
 
             // move gate
-            float smoothTime = Mathf.SmoothStep(0f, 1f, gateMovementLerpTimer);
             gate.position = Vector2   .Lerp(gateOrigionalTransfrom.position, gateFinalTransform.position, smoothTime);
             gate.rotation = Quaternion.Lerp(gateOrigionalTransfrom.rotation, gateFinalTransform.rotation, smoothTime);
         }
