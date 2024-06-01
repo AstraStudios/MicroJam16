@@ -1,5 +1,6 @@
 // origional script from castle clones by sustachio and astra studios
 
+using GLSLVectors;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMove = 0f;
     bool jump = false;
-    bool wasGrounded;
 
     private void Start()
     {
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxis("Horizontal") * (wasGrounded ? runSpeed : runSpeed/jumpSlowMovement) * Time.deltaTime;
+        horizontalMove = Input.GetAxis("Horizontal") * (grounded ? runSpeed : runSpeed/jumpSlowMovement) * Time.deltaTime;
 
         transform.Translate(horizontalMove, 0, 0);
 
@@ -42,24 +42,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(groundCheck.transform.position, groundCheck.size, LayerMask.GetMask("Ground"));
+        grounded = false;
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(groundCheck.transform.position.xy() + groundCheck.offset, groundCheck.size, LayerMask.GetMask("Ground"));
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
-            {
                 grounded = true;
-            }
         }
 
         // Move our character
         Move(jump);
         jump = false;
-
-        wasGrounded = grounded;
-        grounded = false;
-
     }
 
     void Move(bool jump)
