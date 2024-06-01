@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxis("Horizontal") * (grounded ? runSpeed : runSpeed/jumpSlowMovement) * Time.deltaTime;
+        horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
         transform.Translate(horizontalMove, 0, 0);
 
