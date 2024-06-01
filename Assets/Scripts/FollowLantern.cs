@@ -25,6 +25,7 @@ public class FollowLantern : MonoBehaviour
         obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
         ground = GameObject.FindGameObjectsWithTag("Ground");
         rb2D = GetComponent<Rigidbody2D>();
+        rb2D.gravityScale = 14f;
     }
 
     // Update is called once per frame
