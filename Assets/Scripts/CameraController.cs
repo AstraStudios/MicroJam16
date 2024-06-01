@@ -7,17 +7,23 @@ using GLSLVectors;
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] float unitsToShowHorizontally = 20f;
     public int activeZone = 0;
 
     private void Update()
     {
-        // caclulate screen width in unity units
-        float aspect = (float)Screen.width / Screen.height;
-        float worldHeight = Camera.main.orthographicSize * 2;
-        float worldWidth = worldHeight * aspect;
+        // fix horizontal units
+        float screenWidth = unitsToShowHorizontally;
+        float screenHeight = screenWidth * Screen.height / Screen.width;
+        float orthoSize = screenHeight / 2f;
 
-        activeZone = Mathf.RoundToInt(transform.position.x / worldWidth);
+        Camera.main.orthographicSize = orthoSize;
+        Camera.main.aspect = screenWidth / screenHeight;
 
-        Camera.main.transform.position = F.vec3(activeZone * worldWidth, 0, -10);
+        // move camera to active zone
+        activeZone = Mathf.RoundToInt(transform.position.x / screenWidth);
+
+        Camera.main.transform.position = F.vec3(activeZone * unitsToShowHorizontally, 0, -10);
+
     }
 }
