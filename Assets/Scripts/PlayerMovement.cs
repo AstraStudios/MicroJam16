@@ -45,10 +45,8 @@ public class PlayerMovement : MonoBehaviour
         grounded = false;
         Collider2D[] colliders = Physics2D.OverlapBoxAll(groundCheck.transform.position.xy() + groundCheck.offset, groundCheck.size, LayerMask.GetMask("Ground"));
         for (int i = 0; i < colliders.Length; i++)
-        {
-            if (colliders[i].gameObject != gameObject)
+            if (colliders[i].tag == "Ground")
                 grounded = true;
-        }
 
         // Move our character
         Move(jump);
