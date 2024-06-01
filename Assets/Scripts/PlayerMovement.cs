@@ -44,8 +44,6 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
-
-        FlipCharacter();
     }
 
     private void FixedUpdate()
@@ -71,12 +69,4 @@ public class PlayerMovement : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
-
-    void FlipCharacter()
-    {
-        if (horizontalMove > 0)
-            spriteRenderer.flipX = false;
-        if (horizontalMove < 0)
-            spriteRenderer.flipX = true;
-    } 
 }

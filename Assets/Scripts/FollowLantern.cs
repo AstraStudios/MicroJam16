@@ -13,7 +13,7 @@ public class FollowLantern : MonoBehaviour
     GameObject[] ramps; 
     GameObject[] obstacles; 
     GameObject[] ground;
-    float speed = 20f;
+    [SerializeField] float speed = 3f;
     float groundDistance;
     Rigidbody2D rb2D;
 
@@ -59,6 +59,7 @@ public class FollowLantern : MonoBehaviour
             if (colliders[i].tag == "Ground")
                 grounded = true;
 
+        // FIX (?): the step is only like .1 long and never even leaves the player
         // Raycast to detect obstacles
         RaycastHit2D hitObstacle = Physics2D.Raycast(transform.position, direction, step.magnitude, obstacleLayer);
         Debug.DrawRay(transform.position, direction * step.magnitude, Color.red);
@@ -67,12 +68,12 @@ public class FollowLantern : MonoBehaviour
         RaycastHit2D hitRamp = Physics2D.Raycast(transform.position, direction, step.magnitude, rampLayer);
         Debug.DrawRay(transform.position, direction * step.magnitude, Color.blue);
 
-        transform.eulerAngles = F.vec3(0, 0, 0);
+        spriteRenderer.transform.eulerAngles = F.vec3(0, 0, 0);
 
 
         if (((hitObstacle.collider == null || hitRamp.collider != null) && grounded))
         {
-            rb2D.MovePosition(transform.position + step);
+            transform.Translate(step.x, 0, 0);
 
             // wobble
             spriteRenderer.transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
