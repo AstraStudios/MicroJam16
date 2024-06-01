@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/background.uss?fileID=7433441132597879392&amp;guid=bfe47e5ea68d1a640ab11dfba5c07be1&amp;type=3#background" />
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(115, 115, 115); align-items: center; justify-content: space-between;">
+        <engine:VisualElement style="flex-grow: 1; align-self: center; width: 1029px; height: 658px; background-color: rgba(197, 100, 100, 0.48); position: absolute; top: 102px;">
+            <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/025Pikachu_XY_anime_4.png?fileID=2800000&amp;guid=f69b2f038e220ae4285ced1c5c9e58ba&amp;type=3#025Pikachu_XY_anime_4&quot;);" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; align-self: center; width: 1029px; height: 234px; background-color: rgba(197, 100, 100, 0.48); position: absolute; top: 791px; left: auto;">
+            <engine:Label text="Pikachu[a] is a fictional species of the Pokémon media franchise. Designed by Atsuko Nishida and Ken Sugimori, Pikachu first appeared in the 1996 Japanese video games Pokémon Red and Pokémon Green created by Game Freak and Nintendo, which were released outside of Japan in 1998 as Pokémon Red and Pokémon Blue. Pikachu is a yellow, mouse-like creature with electrical abilities. It is a major character in the Pokémon franchise, serving as its mascot. Pikachu is widely considered to be the most popular and well-known Pokémon species, " name="DialougText" style="height: auto; width: auto; white-space: normal; font-size: 27px; text-overflow: clip; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
