@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lantern
+  - Obstacle
+  - Ramp
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -15,9 +18,9 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Ramp
   - Ground
-  - 
+  - Obstacle
   - 
   - 
   - 
