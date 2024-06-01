@@ -16,13 +16,14 @@ public class EnableLantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E) && lanternActiveInt == 0) {
+       if (Input.GetKeyDown("e") && lanternActiveInt == 0) {
         lantern.SetActive(true);
         lanternActiveInt = 1;
        }
-       if (Input.GetKeyDown(KeyCode.E) && lanternActiveInt == 1) {
+       else if (Input.GetKeyDown("e") && lanternActiveInt == 1) {
         lantern.SetActive(false);
         lanternActiveInt = 0;
        }
+       Debug.Log(lanternActiveInt);
     }
 }

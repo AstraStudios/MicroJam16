@@ -31,6 +31,10 @@ public class FollowLantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lantern != null) MoveCharacter();
+    }
+
+    void MoveCharacter() {
         Vector3 targetPosition = new Vector3(lantern.transform.position.x, lantern.transform.position.y, 0);
         Vector3 direction = (targetPosition - transform.position).normalized;
         Vector3 step = direction * speed * Time.deltaTime;
