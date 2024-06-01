@@ -34,11 +34,6 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
         transform.Translate(horizontalMove, 0, 0);
 
-        // wobble
-        transform.eulerAngles = F.vec3(0, 0, 0);
-        if (horizontalMove != 0)
-            transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
-
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;

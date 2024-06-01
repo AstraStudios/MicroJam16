@@ -21,6 +21,7 @@ public class FollowLantern : MonoBehaviour
     [SerializeField] float wobbleSpeed = 6;
 
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private BoxCollider2D groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,6 @@ public class FollowLantern : MonoBehaviour
 
     void MoveCharacter() {
         Vector3 targetPosition = F.vec3(lantern.transform.position.xy(), 0);
-        float distance = (transform.position - targetPosition).magnitude;
         Vector3 direction = (targetPosition - transform.position).normalized;
         Vector3 step = direction * speed * Time.deltaTime;
 
@@ -52,14 +52,12 @@ public class FollowLantern : MonoBehaviour
         if (direction.y < 0)
             spriteRenderer.flipX = false;
 
-        // huh?
-        for (int o = 0; o < ground.Length; o++) {
-            Vector3 diff = ground[o].transform.position - transform.position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < Mathf.Infinity) {
-                closetGround = ground[o];
-            }
-        }
+        // check grounded (can't walk in air)
+        bool grounded = false;
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(groundCheck.transform.position.xy() + groundCheck.offset, groundCheck.size, LayerMask.GetMask("Ground"));
+        for (int i = 0; i < colliders.Length; i++)
+            if (colliders[i].tag == "Ground")
+                grounded = true;
 
         // Raycast to detect obstacles
         RaycastHit2D hitObstacle = Physics2D.Raycast(transform.position, direction, step.magnitude, obstacleLayer);
@@ -70,11 +68,14 @@ public class FollowLantern : MonoBehaviour
         Debug.DrawRay(transform.position, direction * step.magnitude, Color.blue);
 
         transform.eulerAngles = F.vec3(0, 0, 0);
-        groundDistance = transform.position.y - closetGround.transform.position.y;
-        if (((hitObstacle.collider == null || hitRamp.collider != null) && groundDistance < 1f) && distance > 1f)
+
+
+        if (((hitObstacle.collider == null || hitRamp.collider != null) && grounded))
         {
             rb2D.MovePosition(transform.position + step);
-            transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
+
+            // wobble
+            spriteRenderer.transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
         } else Debug.Log("Hit an obstacle, cannot move further");
     }
 
