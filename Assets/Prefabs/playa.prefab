@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4176001109364087244}
   - component: {fileID: 8616933799666720926}
   - component: {fileID: 1393388630819877266}
+  - component: {fileID: 5212875300580016635}
   m_Layer: 13
   m_Name: playa
   m_TagString: Player
@@ -198,6 +199,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lantern: {fileID: 2666137279774330963}
+--- !u!114 &5212875300580016635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536251463109669119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021e6eb7ba7f4fb49b991ba7d64f2957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitsToShowHorizontally: 20
+  activeZone: 0
 --- !u!1 &9100347165623557492
 GameObject:
   m_ObjectHideFlags: 0
