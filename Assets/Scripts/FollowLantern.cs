@@ -49,7 +49,7 @@ public class FollowLantern : MonoBehaviour
         // flip
         if (direction.x > 0)
             spriteRenderer.flipX = true;
-        if (direction.y < 0)
+        if (direction.x < 0)
             spriteRenderer.flipX = false;
 
         // check grounded (can't walk in air)

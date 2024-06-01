@@ -34,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
         transform.Translate(horizontalMove, 0, 0);
 
+        if (horizontalMove > 0)
+            spriteRenderer.flipX = true;
+        if (horizontalMove < 0)
+            spriteRenderer.flipX = false;
+
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
