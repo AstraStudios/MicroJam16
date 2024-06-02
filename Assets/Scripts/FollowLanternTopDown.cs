@@ -9,6 +9,7 @@ public class FollowLanternTopDown : MonoBehaviour
     GameObject lantern;
     [SerializeField] float speed = .5f;
     Rigidbody2D rb2D;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,9 @@ public class FollowLanternTopDown : MonoBehaviour
         Vector3 currentLanternPos = lantern.transform.position;
         Vector3 direction = (currentLanternPos - transform.position).normalized;
         Vector3 step = direction * speed * Time.deltaTime;
+
+        if (direction.x > 0) spriteRenderer.flipX = true;
+        if (direction.x < 0) spriteRenderer.flipX = false;
 
         if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) rb2D.AddForce(F.vec2(step.x,step.y));
 

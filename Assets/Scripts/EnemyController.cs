@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         Vector3 step;
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-        if (Vector3.Distance(playerPos, transform.position) < 10f) {
+        if (Vector3.Distance(playerPos, transform.position) < 5f) {
             Vector3 direction = (playerPos - transform.position).normalized;
             step = direction * speed * Time.deltaTime;
         } else {
