@@ -12,11 +12,14 @@ public class ButtonMovesSomething : MonoBehaviour
 
     bool gateMoving = false;
     float gateMovementLerpTimer = 0f; // count up to one
+
+    [SerializeField] string activatorTag = "Dude";
+
     [SerializeField] float gateMovementSeconds = 1f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (LayerMask.Equals(collision.gameObject.layer, LayerMask.NameToLayer("Player")))
+        if (collision.tag == activatorTag)
             gateMoving = true;
     }
 

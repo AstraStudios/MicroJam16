@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7415181203997598331}
   m_Layer: 2
   m_Name: Dude
-  m_TagString: Untagged
+  m_TagString: Dude
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,6 +260,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+  speed: 3
   wobbleWalkMaxAngle: 10
   wobbleSpeed: 6
   spriteRenderer: {fileID: 4073078725290501385}
