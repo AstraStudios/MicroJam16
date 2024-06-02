@@ -32,5 +32,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/final levels/MidLife.unity
     guid: f2ff0b34c8c5f6444aae690b26fffe9e
+  - enabled: 1
+    path: Assets/Scenes/final levels/6final.unity
+    guid: c923d9c4980f15944b8b24b148b45d59
+  - enabled: 1
+    path: Assets/Scenes/final levels/EndScreen.unity
+    guid: a4ef090bb93685c45b0295edafe7897e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
