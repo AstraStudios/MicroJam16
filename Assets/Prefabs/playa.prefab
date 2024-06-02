@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4074663471491280235}
   - component: {fileID: 783733209768970264}
   - component: {fileID: 8558558639094506554}
+  - component: {fileID: 7483579565597737219}
   - component: {fileID: 4176001109364087244}
   - component: {fileID: 8616933799666720926}
   - component: {fileID: 1393388630819877266}
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 95
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.49557877, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -115,6 +116,18 @@ MonoBehaviour:
   groundCheck: {fileID: 1286050711100822844}
   spriteRenderer: {fileID: 137065305542312873}
   grounded: 0
+--- !u!114 &7483579565597737219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536251463109669119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca54e021cca5ca4fbe67e98543152d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &4176001109364087244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +162,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.054373324, y: -0.07342839}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -159,7 +172,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5770968, y: 0.81360435}
   m_EdgeRadius: 0
 --- !u!50 &8616933799666720926
 Rigidbody2D:
