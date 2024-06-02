@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7615457144024684486}
   m_Layer: 0
   m_Name: gate sprite
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4423919166196445773}
   m_Layer: 0
   m_Name: gate
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

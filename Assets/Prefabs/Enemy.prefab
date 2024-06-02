@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515f476a01650b2419725c5a6f6ca305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wanderForce: 1
+  wanderMinTime: 1.5
+  wanderMaxTime: 3
 --- !u!50 &8441542961318342548
 Rigidbody2D:
   serializedVersion: 4
@@ -113,8 +116,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 5
+  m_Mass: 1
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

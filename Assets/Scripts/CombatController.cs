@@ -7,26 +7,22 @@ using Unity.Mathematics;
 public class CombatController : MonoBehaviour
 {
 
-    [SerializeField] GameObject attack;
-    Camera cam;
+    [SerializeField] float pushMaxDistance = 3;
+    [SerializeField] float pushPower = .001f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        cam = Camera.main;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && GameObject.FindGameObjectsWithTag("Enemy") != null) {
-            Vector3 camPoint = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z));
-            Instantiate(attack, new Vector2(camPoint.x, camPoint.y), Quaternion.identity);
+        // sweep enemys away
+        if (Input.GetMouseButtonDown(1)) {
+            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) 
+            {
+                float distance    = Vector3.Distance(transform.position, enemy.transform.position);
+                Vector2 direction = (enemy.transform.position - transform.position).normalized;
+
+                if (distance > pushMaxDistance) continue;
+
+                enemy.GetComponent<Rigidbody2D>().AddForce(direction * (pushMaxDistance - distance) * pushPower, ForceMode2D.Impulse);
+            }
         }
     }
-
-    static Vector3 GetVectorFromAngle(float angle) {
-        float angleRad = angle * (Mathf.PI/180f);
-        return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
-    } // thanks code monkey for inspiration
 }
