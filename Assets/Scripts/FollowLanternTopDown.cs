@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 public class FollowLanternTopDown : MonoBehaviour
 {
     GameObject lantern;
-    float speed = .5f;
+    [SerializeField] float speed = .5f;
     Rigidbody2D rb2D;
 
     // Start is called before the first frame update
