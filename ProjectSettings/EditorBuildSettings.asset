@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InitilizeScene.unity
     guid: d3f72cc55fd100d4cbf98f723cad0d64
+  - enabled: 1
+    path: Assets/Scenes/LukeTopdownTest.unity
+    guid: b3dd3ee9ff47e844abcf831d72673502
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

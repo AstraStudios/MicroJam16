@@ -30,12 +30,12 @@ public class Explosive : MonoBehaviour
 
     IEnumerator DestroyAfterSeconds() {
         yield return new WaitForSeconds(2);
-        enemyRB.AddForce(F.vec2(10,10));
+        enemyRB.AddForce(F.vec2(Random.Range(-20,20),Random.Range(-20,20)));
         Destroy(gameObject);
     }
 
     IEnumerator MakeBudNormal() {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1.5f);
         enemyRB.drag -= 50f;
     }
 }
