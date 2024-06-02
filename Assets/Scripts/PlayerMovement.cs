@@ -8,17 +8,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 7f;
-    [SerializeField] private float jumpForce = 1200f;      // Amount of force added when the player jumps.
-    [SerializeField] private float jumpSlowMovement = 5f;
 
-    [SerializeField] float wobbleWalkMaxAngle = 30;
-    [SerializeField] float wobbleSpeed = 30;
-
-    [SerializeField] private BoxCollider2D groundCheck;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-
-    public bool grounded;            // Whether or not the player is grounded.
+        // Whether or not the player is grounded.
     private Rigidbody2D rb2D;
 
     private void Start()
