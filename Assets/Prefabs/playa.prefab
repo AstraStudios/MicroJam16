@@ -442,6 +442,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.67415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.67415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.73483
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.62
+      objectReference: {fileID: 0}
     - target: {fileID: 8039808785993804620, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_Name
       value: Lantern
