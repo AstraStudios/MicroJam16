@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.060831
@@ -435,7 +439,7 @@ GameObject:
   - component: {fileID: 261857687}
   - component: {fileID: 261857686}
   - component: {fileID: 261857685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,6 +657,10 @@ PrefabInstance:
     - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_Name
       value: Ground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1128,7 +1136,7 @@ GameObject:
   - component: {fileID: 513939022}
   - component: {fileID: 513939021}
   - component: {fileID: 513939020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2115,6 +2123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5554553
@@ -2179,7 +2191,7 @@ GameObject:
   - component: {fileID: 1255646286}
   - component: {fileID: 1255646285}
   - component: {fileID: 1255646284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2367,7 +2379,7 @@ GameObject:
   - component: {fileID: 1289725400}
   - component: {fileID: 1289725399}
   - component: {fileID: 1289725398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2695,7 +2707,7 @@ GameObject:
   - component: {fileID: 1482751431}
   - component: {fileID: 1482751430}
   - component: {fileID: 1482751429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2965,6 +2977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
       value: 387.99606
@@ -3029,6 +3045,10 @@ PrefabInstance:
     - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_Name
       value: Ground (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
@@ -3319,7 +3339,7 @@ GameObject:
   - component: {fileID: 1772096555}
   - component: {fileID: 1772096554}
   - component: {fileID: 1772096553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3630,6 +3650,10 @@ PrefabInstance:
       propertyPath: dialoug
       value: 
       objectReference: {fileID: 636485338}
+    - target: {fileID: 4250818108401052432, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
+      propertyPath: activatorTag
+      value: Dude
+      objectReference: {fileID: 0}
     - target: {fileID: 4517261795431058878, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.258854
@@ -3699,6 +3723,10 @@ PrefabInstance:
       propertyPath: dialoug
       value: 
       objectReference: {fileID: 1199019381}
+    - target: {fileID: 4250818108401052432, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
+      propertyPath: activatorTag
+      value: Dude
+      objectReference: {fileID: 0}
     - target: {fileID: 4517261795431058878, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.35
@@ -3759,6 +3787,10 @@ PrefabInstance:
     - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_Name
       value: Ground (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
@@ -4021,7 +4053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4043737569219885999, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
       propertyPath: m_LocalScale.x
@@ -4182,6 +4214,10 @@ PrefabInstance:
       propertyPath: dialoug
       value: 
       objectReference: {fileID: 784331566}
+    - target: {fileID: 4250818108401052432, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
+      propertyPath: activatorTag
+      value: Dude
+      objectReference: {fileID: 0}
     - target: {fileID: 4517261795431058878, guid: dbea7fed09cdd524f8cf4691c2d9145d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.4
@@ -4242,7 +4278,7 @@ GameObject:
   - component: {fileID: 2100642602}
   - component: {fileID: 2100642601}
   - component: {fileID: 2100642600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chair (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
