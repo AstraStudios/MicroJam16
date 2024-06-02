@@ -2,29 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GLSLVectors;
+using Unity.VisualScripting;
 
 public class FollowLanternTopDown : MonoBehaviour
 {
     GameObject lantern;
-    float speed = 2f;
+    float speed = .5f;
+    Rigidbody2D rb2D;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         lantern = GameObject.FindGameObjectWithTag("Lantern");
-        if (lantern!=null) MoveCharacter(); Debug.DrawRay(transform.position, lantern.transform.position, Color.red);
+        if (lantern!=null) MoveCharacter();
     }
 
     void MoveCharacter() {
         Vector3 currentLanternPos = lantern.transform.position;
-        var step = speed * Time.deltaTime;
+        Vector3 direction = (currentLanternPos - transform.position).normalized;
+        Vector3 step = direction * speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) transform.position = Vector3.MoveTowards(transform.position, currentLanternPos, step);
+        if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) rb2D.AddForce(F.vec2(step.x,step.y));
+
+        //if (ray2D.collider != null && Vector3.Distance(transform.position, currentLanternPos) > 0.5f) transform.position = Vector3.MoveTowards(transform.position, currentLanternPos, step);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Obstacle")) Debug.Log("Collided with an obstacle");
     }
 }
