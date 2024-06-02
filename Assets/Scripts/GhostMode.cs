@@ -22,7 +22,9 @@ public class GhostMode : MonoBehaviour
     }
 
     void UpdatePlayerLayer() {
-        if (isInGhostMode) gameObject.layer = LayerMask.NameToLayer(ghostLayer);
-        else gameObject.layer = LayerMask.NameToLayer(normalLayer);
+        if (isInGhostMode) 
+            gameObject.layer = LayerMask.NameToLayer(ghostLayer);
+        else 
+            gameObject.layer = LayerMask.NameToLayer(normalLayer);
     }
 }
