@@ -89,8 +89,8 @@ GameObject:
   - component: {fileID: 4867041473442000586}
   - component: {fileID: 8613323329816635049}
   - component: {fileID: 8934111050504489953}
+  - component: {fileID: 4226869490481163697}
   - component: {fileID: 8057868215087813711}
-  - component: {fileID: 7415181203997598331}
   m_Layer: 2
   m_Name: Dude
   m_TagString: Dude
@@ -215,6 +215,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.96}
   m_EdgeRadius: 0
+--- !u!114 &4226869490481163697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077911774125882213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb160f8c7a23ea74b96a654a9676252b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2000
 --- !u!50 &8057868215087813711
 Rigidbody2D:
   serializedVersion: 4
@@ -228,7 +241,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 23
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -242,29 +255,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7415181203997598331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5077911774125882213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69dd80cde1863be4fb34964cdd6124bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rampLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  speed: 1000
-  wobbleWalkMaxAngle: 10
-  wobbleSpeed: 6
-  spriteRenderer: {fileID: 4073078725290501385}
-  groundCheck: {fileID: 4596430298981955435}
 --- !u!1 &6940201754941808668
 GameObject:
   m_ObjectHideFlags: 0
