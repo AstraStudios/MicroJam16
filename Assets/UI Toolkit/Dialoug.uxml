@@ -6,7 +6,7 @@
                 <engine:Label name="NameText" text="Death" style="height: auto; width: auto; white-space: normal; font-size: 35px; text-overflow: clip; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); -unity-text-align: middle-left; margin-left: 18px;" />
             </engine:VisualElement>
             <engine:VisualElement style="flex-grow: 1; align-self: center; width: 1029px; height: 234px; background-color: rgb(171, 157, 131); position: relative; top: 0; left: auto; font-size: 28px; -unity-text-align: middle-center;">
-                <engine:Label name="DialougText" text="You gyatt to help this guy" style="height: 225px; width: auto; white-space: normal; font-size: 45px; text-overflow: clip; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); -unity-text-align: upper-left; margin-left: 13px;" />
+                <engine:Label name="DialougText" style="height: 225px; width: auto; white-space: normal; font-size: 45px; text-overflow: clip; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); -unity-text-align: upper-left; margin-left: 13px;" />
             </engine:VisualElement>
         </engine:VisualElement>
     </engine:VisualElement>
