@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] float unitsToShowHorizontally = 20f;
     public int activeZone = 0;
+    int activeZoneY = 0;
 
     private void Update()
     {
@@ -22,8 +23,9 @@ public class CameraController : MonoBehaviour
 
         // move camera to active zone
         activeZone = Mathf.RoundToInt(transform.position.x / screenWidth);
+        activeZoneY = Mathf.RoundToInt(transform.position.y / screenHeight);
 
-        Camera.main.transform.position = F.vec3(activeZone * unitsToShowHorizontally, 0, -10);
+        Camera.main.transform.position = F.vec3(activeZone * unitsToShowHorizontally, activeZoneY * orthoSize, -10);
 
     }
 }

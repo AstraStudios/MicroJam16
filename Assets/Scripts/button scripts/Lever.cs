@@ -9,6 +9,8 @@ public class Lever : MonoBehaviour
     float movementLerpTimer = 0f;
     [SerializeField] float movementTime;
     bool isActivated = false;
+    [SerializeField] GameObject leverOff;
+    [SerializeField] GameObject leverOn;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,8 @@ public class Lever : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Player") {
             isActivated = true;
+            leverOff.SetActive(false);
+            leverOn.SetActive(true);
         }
     }
 }
