@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Explosive : MonoBehaviour
 {
+
+    Rigidbody2D enemyRB;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +22,20 @@ public class Explosive : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.CompareTag("Enemy")) {
-            collider.GetComponent<Rigidbody2D>().drag += 50f;
-            collider.GetComponent<Rigidbody2D>().AddForce(F.vec2(10,10));
+            enemyRB = collider.GetComponent<Rigidbody2D>();
+            enemyRB.drag += 50f;
+            StartCoroutine(MakeBudNormal());
         }
     }
 
     IEnumerator DestroyAfterSeconds() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        enemyRB.AddForce(F.vec2(10,10));
         Destroy(gameObject);
+    }
+
+    IEnumerator MakeBudNormal() {
+        yield return new WaitForSeconds(4);
+        enemyRB.drag -= 50f;
     }
 }
