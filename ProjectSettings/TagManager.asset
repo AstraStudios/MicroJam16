@@ -9,6 +9,7 @@ TagManager:
   - Ramp
   - Ground
   - Dude
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - GhostCollision
   - GhostPassThrough
-  - 
+  - PostProcessing
   - Ramp
   - Ground
   - Obstacle
