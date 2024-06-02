@@ -24,5 +24,17 @@ public class CombatController : MonoBehaviour
                 enemy.GetComponent<Rigidbody2D>().AddForce(direction * (pushMaxDistance - distance) * pushPower, ForceMode2D.Impulse);
             }
         }
+
+        if (Input.GetMouseButtonDown(0)) {
+            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) 
+            {
+                float distance    = Vector3.Distance(transform.position, enemy.transform.position);
+                Vector2 direction = -(enemy.transform.position - transform.position).normalized;
+
+                if (distance > pushMaxDistance) continue;
+
+                enemy.GetComponent<Rigidbody2D>().AddForce(direction * distance * pushPower, ForceMode2D.Impulse);
+            }
+        }
     }
 }
