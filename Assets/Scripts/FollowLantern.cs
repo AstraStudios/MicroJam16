@@ -30,7 +30,7 @@ public class FollowLantern : MonoBehaviour
         obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
         ground = GameObject.FindGameObjectsWithTag("Ground");
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.gravityScale = 20f; //slam him into the ground because he wants to fly
+        //rb2D.gravityScale = 20f; //slam him into the ground because he wants to fly
     }
 
     // Update is called once per frame
@@ -61,19 +61,20 @@ public class FollowLantern : MonoBehaviour
 
         // FIX (?): the step is only like .1 long and never even leaves the player
         // Raycast to detect obstacles
-        RaycastHit2D hitObstacle = Physics2D.Raycast(transform.position, direction, step.magnitude, obstacleLayer);
-        Debug.DrawRay(transform.position, direction * step.magnitude, Color.red);
+        //RaycastHit2D hitObstacle = Physics2D.Raycast(transform.position, direction, step.magnitude, obstacleLayer);
+        //Debug.DrawRay(transform.position, direction * step.magnitude, Color.red);
 
         // Raycast to detect ramps
-        RaycastHit2D hitRamp = Physics2D.Raycast(transform.position, direction, step.magnitude, rampLayer);
-        Debug.DrawRay(transform.position, direction * step.magnitude, Color.blue);
+        //RaycastHit2D hitRamp = Physics2D.Raycast(transform.position, direction, step.magnitude, rampLayer);
+        //Debug.DrawRay(transform.position, direction * step.magnitude, Color.blue);
 
         spriteRenderer.transform.eulerAngles = F.vec3(0, 0, 0);
 
 
-        if (((hitObstacle.collider == null || hitRamp.collider != null) && grounded))
+        //if (((hitObstacle.collider == null || hitRamp.collider != null) && grounded))
+        if (grounded)
         {
-            transform.Translate(step.x, 0, 0);
+            rb2D.AddForce(F.vec2(step.x, 0), ForceMode2D.Force);
 
             // wobble
             spriteRenderer.transform.eulerAngles = F.vec3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleWalkMaxAngle);
@@ -97,6 +98,6 @@ public class FollowLantern : MonoBehaviour
     }
 
     void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Ramp")) rb2D.gravityScale = 20f;
+        //if (collision.gameObject.CompareTag("Ramp")) rb2D.gravityScale = 20f;
     }
 }
