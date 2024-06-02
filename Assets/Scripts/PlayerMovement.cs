@@ -3,6 +3,7 @@
 using GLSLVectors;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 7f;
 
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer lanternRenderer;
 
         // Whether or not the player is grounded.
     private Rigidbody2D rb2D;
@@ -28,7 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalMove > 0)
             spriteRenderer.flipX = true;
+            lanternRenderer.flipX = true;
         if (horizontalMove < 0)
             spriteRenderer.flipX = false;
+            lanternRenderer.flipX = false;
     }
 }

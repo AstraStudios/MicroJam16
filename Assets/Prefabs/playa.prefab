@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 50000
   spriteRenderer: {fileID: 137065305542312873}
+  lanternRenderer: {fileID: 7768914935447186194}
 --- !u!114 &7483579565597737219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,11 +344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2786335387383002821, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.234
       objectReference: {fileID: 0}
     - target: {fileID: 2786335387383002821, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.034
       objectReference: {fileID: 0}
     - target: {fileID: 2786335387383002821, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -403,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.46
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 7928442947143046736, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
       propertyPath: m_LocalPosition.y
@@ -421,6 +422,11 @@ PrefabInstance:
 --- !u!1 &2666137279774330963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8039808785993804620, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
+  m_PrefabInstance: {fileID: 5373681406127487775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7768914935447186194 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2396931210314502157, guid: ac2701e0e6147564aae9b81b23563d60, type: 3}
   m_PrefabInstance: {fileID: 5373681406127487775}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7798030588820704730 stripped
