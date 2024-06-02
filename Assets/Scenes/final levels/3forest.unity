@@ -4558,7 +4558,7 @@ MonoBehaviour:
   gate: {fileID: 800456182}
   gateOrigionalTransfrom: {fileID: 800456182}
   gateFinalTransform: {fileID: 1856991315}
-  gateMovementSeconds: 3000
+  gateMovementSeconds: 2
   open: 1
 --- !u!4 &800456182 stripped
 Transform:

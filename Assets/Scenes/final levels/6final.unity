@@ -1195,7 +1195,7 @@ MonoBehaviour:
   gateOrigionalTransfrom: {fileID: 1369353599}
   gateFinalTransform: {fileID: 350466372}
   gateMovementSeconds: 2
-  open: 1
+  open: 0
 --- !u!4 &428118835
 Transform:
   m_ObjectHideFlags: 0
@@ -4977,6 +4977,10 @@ PrefabInstance:
       propertyPath: gate
       value: 
       objectReference: {fileID: 428118834}
+    - target: {fileID: 8831841251587985935, guid: bb6c05cb48d583744aa18eba7e81907c, type: 3}
+      propertyPath: close
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5698,7 +5702,7 @@ PrefabInstance:
       objectReference: {fileID: 428118834}
     - target: {fileID: 8831841251587985935, guid: bb6c05cb48d583744aa18eba7e81907c, type: 3}
       propertyPath: close
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8831841251587985935, guid: bb6c05cb48d583744aa18eba7e81907c, type: 3}
       propertyPath: activatorTag
