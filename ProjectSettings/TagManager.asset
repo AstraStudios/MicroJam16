@@ -12,17 +12,17 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - GhostCollision
+  - GhostPassThrough
   - 
   - Ramp
   - Ground
   - Obstacle
+  - Ghost
   - 
-  - Player
   - 
   - 
   - 
