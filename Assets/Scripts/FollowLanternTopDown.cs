@@ -23,10 +23,7 @@ public class FollowLanternTopDown : MonoBehaviour
     void Update()
     {
         lantern = GameObject.FindGameObjectWithTag("Lantern");
-        if (lantern!=null) MoveCharacter();
-    }
 
-    void MoveCharacter() {
         bool canSeeBug = false;
         foreach (GameObject bug in GameObject.FindGameObjectsWithTag("Enemy"))
         {
@@ -43,8 +40,16 @@ public class FollowLanternTopDown : MonoBehaviour
                 if (hit.transform.tag == "Ground") canSeeThisBug = false;
 
             if (canSeeThisBug) canSeeBug = true;
-            
         }
+
+        transform.eulerAngles = Vector3.zero;
+        if (canSeeBug)
+        {
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleMaxAngle);
+            return;
+        }
+
+        if (lantern == null) return;
 
         Vector3 currentLanternPos = lantern.transform.position;
         Vector3 direction = (currentLanternPos - transform.position).normalized;
@@ -53,18 +58,7 @@ public class FollowLanternTopDown : MonoBehaviour
         if (direction.x > 0) spriteRenderer.flipX = true;
         if (direction.x < 0) spriteRenderer.flipX = false;
 
-        transform.eulerAngles = Vector3.zero;
-
-        // move if safe from bug
-        if (!canSeeBug)
-        {
-            if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) rb2D.AddForce(step.xy());
-        }
-
-        // wobble in fear otherwise
-        else
-        {
-            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * wobbleSpeed) * wobbleMaxAngle);
-        }
+        if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) 
+            rb2D.AddForce(step.xy());
     }
 }
