@@ -8,10 +8,11 @@ public class SingleActivateButton : MonoBehaviour
     [SerializeField] Gate gate;
 
     [SerializeField] string activatorTag = "Dude";
+    [SerializeField] bool close = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == activatorTag)
-            gate.Open();
+            gate.open = !close;
     }
 }
