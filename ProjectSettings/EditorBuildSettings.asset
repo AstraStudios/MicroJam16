@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/final levels/InitilizeScene.unity
     guid: d3f72cc55fd100d4cbf98f723cad0d64
   - enabled: 1
+    path: Assets/Scenes/final levels/TitleScene.unity
+    guid: 25fb1ca8d33f37a4c87aab799a86710c
+  - enabled: 1
     path: Assets/Scenes/final levels/1meetdeath.unity
     guid: bd871c978be465b49b82ea9d72ed4563
   - enabled: 1
