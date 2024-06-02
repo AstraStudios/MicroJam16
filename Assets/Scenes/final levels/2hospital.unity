@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gate: {fileID: 908055338}
   activatorTag: Dude
+  close: 0
 --- !u!1001 &19375460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2934,7 +2935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1939489126491012989, guid: b89d5f50b368eb64399eedf332a87049, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
