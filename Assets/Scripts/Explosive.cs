@@ -7,6 +7,7 @@ public class Explosive : MonoBehaviour
 {
 
     Rigidbody2D enemyRB;
+    [SerializeField] ParticleSystem explosionParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,7 @@ public class Explosive : MonoBehaviour
 
     IEnumerator DestroyAfterSeconds() {
         yield return new WaitForSeconds(2);
-        enemyRB.AddForce(F.vec2(Random.Range(-20,20),Random.Range(-20,20)));
-        Destroy(gameObject);
+        if (enemyRB != null)    enemyRB.AddForce(F.vec2(Random.Range(-transform.position.x, transform.position.x), Random.Range(-transform.position.y, transform.position.y))); ParticleSystem spawnedParticles = Instantiate(explosionParticles, transform.position, Quaternion.identity); spawnedParticles.Play(); Destroy(gameObject);
     }
 
     IEnumerator MakeBudNormal() {

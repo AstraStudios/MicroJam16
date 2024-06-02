@@ -19,7 +19,7 @@ public class CombatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(1) && GameObject.FindGameObjectsWithTag("Enemy") != null) {
             Vector3 camPoint = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z));
             Instantiate(attack, new Vector2(camPoint.x, camPoint.y), Quaternion.identity);
         }
