@@ -22,10 +22,16 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 step;
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-        Vector3 direction = (playerPos - transform.position).normalized;
-        Vector3 step = direction * speed * Time.deltaTime;
+        if (Vector3.Distance(playerPos, transform.position) < 10f) {
+            Vector3 direction = (playerPos - transform.position).normalized;
+            step = direction * speed * Time.deltaTime;
+        } else {
+            Vector3 direction = (new Vector3(Random.Range(-40f,40f), Random.Range(-40f, 40f), 0) - transform.position).normalized;
+            step = direction * speed * Time.deltaTime;
+        }
 
         rb2D.AddForce(F.vec2(step.x,step.y));
     }
