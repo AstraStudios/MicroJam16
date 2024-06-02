@@ -14,6 +14,7 @@ public class MusicHandler : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         audioPlayer = gameObject.GetComponent<AudioSource>();
         audioPlayer.loop = false;
+        currentClipIndex = Random.Range(0, audioClips.Count - 1);
         PlayNextClip();
     }
 
@@ -34,6 +35,8 @@ public class MusicHandler : MonoBehaviour
     {
         audioPlayer.clip = audioClips[currentClipIndex];
 
+        currentClipIndex++;
+        currentClipIndex %= audioClips.Count - 1;
         audioPlayer.Play();
     }
 }
