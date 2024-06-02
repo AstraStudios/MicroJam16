@@ -4559,7 +4559,7 @@ MonoBehaviour:
   gateOrigionalTransfrom: {fileID: 800456182}
   gateFinalTransform: {fileID: 1856991315}
   gateMovementSeconds: 3000
-  open: 0
+  open: 1
 --- !u!4 &800456182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5052923883970175184, guid: 003e4ec0c7ca5744791c03d8aae9fbc8, type: 3}
@@ -9885,11 +9885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8028930502587791207, guid: 73e8908abc476fe44b63d164168faad0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.82
+      value: 16.58
       objectReference: {fileID: 0}
     - target: {fileID: 8028930502587791207, guid: 73e8908abc476fe44b63d164168faad0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.55
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 8028930502587791207, guid: 73e8908abc476fe44b63d164168faad0, type: 3}
       propertyPath: m_LocalPosition.z
