@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb160f8c7a23ea74b96a654a9676252b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1050
+  speed: 1750
   spriteRenderer: {fileID: 4073078725290501385}
   wobbleMaxAngle: 5
   wobbleSpeed: 30

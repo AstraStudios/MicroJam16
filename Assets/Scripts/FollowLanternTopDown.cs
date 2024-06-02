@@ -57,6 +57,7 @@ public class FollowLanternTopDown : MonoBehaviour
 
         if (direction.x > 0) spriteRenderer.flipX = true;
         if (direction.x < 0) spriteRenderer.flipX = false;
+               
 
         if (Vector3.Distance(transform.position, currentLanternPos) > 0.5f) 
             rb2D.AddForce(step.xy());
