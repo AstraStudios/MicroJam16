@@ -24,7 +24,7 @@ public class LoadNextScene : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.CompareTag("Dude") && collider.CompareTag("Player")) {
+        if (collider.CompareTag("Dude")) {
             SceneManager.LoadScene(nextScene);
         }
     }

@@ -8,11 +8,23 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/InitilizeScene.unity
-    guid: d3f72cc55fd100d4cbf98f723cad0d64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LukeTopdownTest.unity
     guid: b3dd3ee9ff47e844abcf831d72673502
+  - enabled: 1
+    path: Assets/Scenes/final levels/InitilizeScene.unity
+    guid: d3f72cc55fd100d4cbf98f723cad0d64
+  - enabled: 1
+    path: Assets/Scenes/final levels/1meetdeath.unity
+    guid: bd871c978be465b49b82ea9d72ed4563
+  - enabled: 1
+    path: Assets/Scenes/final levels/2hospital.unity
+    guid: a14e1b18db7770a4c8101e482a6dab60
+  - enabled: 1
+    path: Assets/Scenes/final levels/3forest.unity
+    guid: bb155f850cf075147aee9a8d96fdf0c3
+  - enabled: 1
+    path: Assets/Scenes/final levels/4treehouse.unity
+    guid: 4584b66b74c8d2e4f89d8405a485f0de
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
